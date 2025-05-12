@@ -21,8 +21,11 @@ function BlogCard({ title, summary, coverImage, tags }: Props) {
           <h1 className="font-bold text-2xl">{title}</h1>
           <p className="text-gray-600 ">{summary}</p>
           <div className="flex flex-row gap-2">
-            {tags.map((tag) => (
-              <div className="border-1 border-gray-400 rounded-2xl w-max px-2 py-1">
+            {tags.map((tag, index) => (
+              <div
+                key={index}
+                className="border-1 border-gray-400 rounded-2xl w-max px-2 py-1"
+              >
                 {tag}
               </div>
             ))}
